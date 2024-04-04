@@ -9,6 +9,7 @@ mkdir -p $DIST/intermediates
 
 #cleanup
 checkpoint "Cleanup TKLiveSync"
+xattr -w com.apple.xcode.CreatedByBuildSystem true $(PWD)/build
 xcodebuild -project v8ios.xcodeproj \
            -target TKLiveSync \
            -configuration Release clean \
