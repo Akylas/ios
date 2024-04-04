@@ -1,5 +1,5 @@
 {
-  "name": "@nativescript/ios",
+  "name": "@akylas/nativescript-ios-runtime",
   "description": "NativeScript Runtime for iOS",
   "version": "8.6.3",
   "keywords": [
