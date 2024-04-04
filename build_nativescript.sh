@@ -53,6 +53,7 @@ mkdir -p $DIST
 mkdir -p $DIST/intermediates
 
 checkpoint "Cleanup NativeScript"
+mkdir -p $(PWD)/build
 xattr -w com.apple.xcode.CreatedByBuildSystem true $(PWD)/build
 xcodebuild -project v8ios.xcodeproj \
            -target "NativeScript" \
