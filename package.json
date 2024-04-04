@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/NativeScript/ios"
+    "url": "https://github.com/Akylas/nativescript-ios-runtime"
   },
   "author": {
     "name": "NativeScript Team",
