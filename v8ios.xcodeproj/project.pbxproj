@@ -316,6 +316,7 @@
 		C2F64E8322E870A300EDB057 /* NativeScript.mm in Sources */ = {isa = PBXBuildFile; fileRef = C2F64E8222E870A300EDB057 /* NativeScript.mm */; };
 		C2FEA16F22A3C75C00A5C0FC /* InlineFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2FEA16D22A3C75C00A5C0FC /* InlineFunctions.cpp */; };
 		C2FEA17022A3C75C00A5C0FC /* InlineFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = C2FEA16E22A3C75C00A5C0FC /* InlineFunctions.h */; };
+		D585AA262BC592A4009FA418 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D585AA252BC592A4009FA418 /* QuartzCore.framework */; };
 		F6191AAE29C0FCE8003F588F /* JsV8InspectorClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F6191AA629C0FCE7003F588F /* JsV8InspectorClient.h */; };
 		F6191AB029C0FCE8003F588F /* JsV8InspectorClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = F6191AA829C0FCE7003F588F /* JsV8InspectorClient.mm */; };
 		F6191AB129C0FCE8003F588F /* InspectorServer.h in Headers */ = {isa = PBXBuildFile; fileRef = F6191AA929C0FCE7003F588F /* InspectorServer.h */; };
@@ -798,6 +799,7 @@
 		C2FF3017225203FD00933782 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C2FF301C2252062A00933782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C2FF301F2252065E00933782 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		D585AA252BC592A4009FA418 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		F6191AA629C0FCE7003F588F /* JsV8InspectorClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsV8InspectorClient.h; sourceTree = "<group>"; };
 		F6191AA829C0FCE7003F588F /* JsV8InspectorClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JsV8InspectorClient.mm; sourceTree = "<group>"; };
 		F6191AA929C0FCE7003F588F /* InspectorServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InspectorServer.h; sourceTree = "<group>"; };
@@ -850,6 +852,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D585AA262BC592A4009FA418 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1437,6 +1440,7 @@
 		C2FF3016225203FD00933782 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D585AA252BC592A4009FA418 /* QuartzCore.framework */,
 				C2253801241A5AA200192740 /* libbz2.tbd */,
 				C2FF301F2252065E00933782 /* CoreFoundation.framework */,
 				C2FF301C2252062A00933782 /* UIKit.framework */,

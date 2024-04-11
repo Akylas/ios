@@ -1,5 +1,6 @@
 #include <string>
 #include <chrono>
+#include <QuartzCore/CABase.h>
 #include "Runtime.h"
 #include "Caches.h"
 #include "Console.h"
@@ -276,10 +277,11 @@ void Runtime::DefinePerformanceObject(Isolate* isolate, Local<ObjectTemplate> gl
 }
 
 void Runtime::PerformanceNowCallback(const FunctionCallbackInfo<Value>& args) {
-    std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
-    std::chrono::milliseconds timestampMs = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch());
-    double result = timestampMs.count();
-    args.GetReturnValue().Set(result);
+//    std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+//    std::chrono::milliseconds timestampMs = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch());
+//    double result = timestampMs.count();
+  double result = CACurrentMediaTime() * 1000.0;
+  args.GetReturnValue().Set(result);
 }
 
 void Runtime::DefineNativeScriptVersion(Isolate* isolate, Local<ObjectTemplate> globalTemplate) {
@@ -289,9 +291,10 @@ void Runtime::DefineNativeScriptVersion(Isolate* isolate, Local<ObjectTemplate> 
 
 void Runtime::DefineTimeMethod(v8::Isolate* isolate, v8::Local<v8::ObjectTemplate> globalTemplate) {
     Local<FunctionTemplate> timeFunctionTemplate = FunctionTemplate::New(isolate, [](const FunctionCallbackInfo<Value>& info) {
-        auto nano = std::chrono::time_point_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now());
-        double duration = nano.time_since_epoch().count() / 1000000.0;
-        info.GetReturnValue().Set(duration);
+//        struct timespec now;
+//        clock_gettime(CLOCK_MONOTONIC, &now);
+        double result = CACurrentMediaTime() * 1000.0;
+        info.GetReturnValue().Set(result);
     });
     globalTemplate->Set(ToV8String(isolate, "__time"), timeFunctionTemplate);
 }
