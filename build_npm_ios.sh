@@ -9,7 +9,7 @@ mkdir -p "$OUTPUT_DIR"
 mkdir -p "$OUTPUT_DIR/framework"
 cp ./package.json "$OUTPUT_DIR"
 
-cp -r "./project-template-ios/" "$OUTPUT_DIR/framework"
+cp -r "project-template-ios/." "$OUTPUT_DIR/framework"
 
 cp -r "dist/NativeScript.xcframework" "$OUTPUT_DIR/framework/internal"
 cp -r "dist/TKLiveSync.xcframework" "$OUTPUT_DIR/framework/internal"
