@@ -67,7 +67,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: npm-package
-          path: dist/nativescript-ios-${{steps.npm_version_output.outputs.NPM_VERSION}}.tgz
+          path: dist/akylas-nativescript-ios-runtime-${{steps.npm_version_output.outputs.NPM_VERSION}}.tgz
       - name: Upload dSYMs artifact
         uses: actions/upload-artifact@v3
         with:
@@ -152,7 +152,7 @@ jobs:
       - name: Publish package
         run: |
           echo "Publishing @akylas/nativescript-ios-runtime@$NPM_VERSION to NPM with tag $NPM_TAG..."
-          npm publish ./dist/nativescript-ios-${{env.NPM_VERSION}}.tgz --tag $NPM_TAG --provenance
+          npm publish ./dist/akylas-nativescript-ios-runtime-${{env.NPM_VERSION}}.tgz --tag $NPM_TAG --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
   github-release:
