@@ -1,5 +1,7 @@
 on:
   workflow_dispatch:
+    branches:
+      - main
   push:
     branches:
       - main
@@ -188,6 +190,6 @@ jobs:
         run: npx conventional-changelog -p angular -r2 > body.md
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: "dist/nativescript-ios-*.tgz,dist/dSYMs/*.zip"
+          artifacts: "dist/akylas-nativescript-ios-runtime-*.tgz,dist/dSYMs/*.zip"
           bodyFile: "body.md"
           prerelease: ${{needs.build.outputs.npm_tag != 'latest'}}
